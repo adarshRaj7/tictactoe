@@ -149,11 +149,18 @@ class tictactoe
 
     public static void main(String args [])
     {
+        while(true)
+        {
         System.out.println("Enter the size of board :");
         n=scn.nextInt();   
         
         game curr=new game(n);
         runGame(curr);
+        System.out.println("Play again?\nY / N");
+        char choice =scn.next().charAt(0);
+        if(choice=='N' || choice=='n')
+            break;
+        }
 
     }
 }
